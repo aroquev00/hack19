@@ -1,20 +1,9 @@
-
-
 {
-  "name": "hack19",
-  "version": "1.0.0",
-  "description": "Hack 19 app",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx nodemon server.js"
-  },
-  "author": "",
-  "license": "ISC",
+  "name": "socket-chat-example",
+  "version": "0.0.1",
+  "description": "my first socket.io app",
   "dependencies": {
-    "express": "^4.17.1"
-  },
-  "devDependencies": {
-    "nodemon": "^1.19.0"
+    "serialport": "^7.1.5",
+    "socket.io": "^2.2.0"
   }
 }
