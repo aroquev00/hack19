@@ -11,13 +11,11 @@
       #messages { list-style-type: none; margin: 0; padding: 0; }
       #messages li { padding: 5px 10px; }
       #messages li:nth-child(odd) { background: #eee; }
+      h1 {}
     </style>
   </head>
   <body>
-    <ul id="messages"></ul>
-    <form action="">
-      <input id="m" autocomplete="off" /><button>Send</button>
-    </form>
+    <h1>El gasto de luz es de: <span id="datos" style="color: red;"></span> kW/h</h1>
 
     <script src="/socket.io/socket.io.js"></script>
 <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
@@ -30,8 +28,9 @@
             $('#m').val('');
             return false;
           });
-          socket.on('chat message', function(msg){
+          socket.on('dato luz', function(msg){
             $('#messages').append($('<li>').text(msg));
+              document.getElementById("datos").innerHTML = msg;
           });
         });
       </script>
