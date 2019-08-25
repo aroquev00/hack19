@@ -15,7 +15,8 @@
     </style>
   </head>
   <body>
-    <h1>El gasto de luz es de: <span id="datos" style="color: red;"></span> kW/h</h1>
+    <h1>El gasto de luz es de: <span id="datosLuz" style="color: red;"></span> kW/h</h1>
+    <h1>El gasto de agua es de: <span id="datosAgua" style="color: blue;"></span> m^3/h</h1>
 
     <script src="/socket.io/socket.io.js"></script>
 <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
@@ -29,8 +30,10 @@
             return false;
           });
           socket.on('dato luz', function(msg){
-            $('#messages').append($('<li>').text(msg));
-              document.getElementById("datos").innerHTML = msg;
+            document.getElementById("datosLuz").innerHTML = msg;
+          });
+          socket.on('dato agua', function(msg){
+            document.getElementById("datosAgua").innerHTML = msg;
           });
         });
       </script>

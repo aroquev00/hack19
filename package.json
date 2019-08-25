@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "my first socket.io app",
   "dependencies": {
+    "plotly": "^1.0.6",
     "serialport": "^7.1.5",
     "socket.io": "^2.2.0"
   }
